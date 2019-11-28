@@ -3,7 +3,7 @@
 from setuptools import find_packages, setup
 
 requirements = [
-    'pulpcore~=3.0rc8',
+    'pulpcore>=3.0rc8',
     'mongoengine',
     'semantic_version',
     'jsonschema'
@@ -36,7 +36,8 @@ setup(
         ],
         'migrators': [
             'iso = pulp_2to3_migration.app.plugin.iso.migrator:IsoMigrator',
-            'docker = pulp_2to3_migration.app.plugin.docker.migrator:DockerMigrator',
+#            'docker = pulp_2to3_migration.app.plugin.docker.migrator:DockerMigrator',
+#            'rpm = pulp_2to3_migration.app.plugin.rpm.migrator:RpmMigrator'
         ]
     }
 )
